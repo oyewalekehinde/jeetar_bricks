@@ -1,7 +1,5 @@
-import 'dart:developer';
-
-import 'package:dio/dio.dart';
 import '../../generated/l10n.dart';
+import 'package:dio/dio.dart';
 import 'interceptors.dart';
 
 class HttpService {
@@ -16,8 +14,8 @@ class HttpService {
       this.isFormType = false}) {
     _dio = Dio(BaseOptions(
       baseUrl: baseUrl,
-      connectTimeout: 30000,
-      receiveTimeout: 25000,
+      connectTimeout: Duration(seconds: 30),
+      receiveTimeout: Duration(seconds: 25),
     ));
     _interceptorsInit();
   }
@@ -98,10 +96,10 @@ extension ResponseExt on Response {
 
 String errorDefaultMessage = S.current.anErrorOccurred;
 // Error Handler Function
-String networkErrorHandler(DioError error,
-    {Function(DioError e)? onResponseError}) {
+String networkErrorHandler(DioException error,
+    {Function(DioException e)? onResponseError}) {
   switch (error.type) {
-    case DioErrorType.response:
+    case DioExceptionType.badResponse:
       if (onResponseError == null && error.response != null) {
         if (error.response?.statusCode == 500) {
           return errorDefaultMessage;
@@ -109,15 +107,15 @@ String networkErrorHandler(DioError error,
         return error.response?.data["message"];
       }
       return onResponseError!(error);
-    case DioErrorType.connectTimeout:
+    case DioExceptionType.connectionTimeout:
       return S.current.kindlyTryAgain;
-    case DioErrorType.sendTimeout:
+    case DioExceptionType.sendTimeout:
       return S.current.kindlyTryAgain;
-    case DioErrorType.receiveTimeout:
+    case DioExceptionType.receiveTimeout:
       return S.current.kindlyTryAgain;
-    case DioErrorType.cancel:
+    case DioExceptionType.cancel:
       return S.current.requestCancelled;
-    case DioErrorType.other:
+    case DioExceptionType.unknown:
       return S.current.noInternetConnection;
     default:
       return errorDefaultMessage;

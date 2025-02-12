@@ -16,7 +16,7 @@ class LocalNotificationManager {
 
   static const _initializationSettingsAndroid =
       AndroidInitializationSettings('app_icon');
-  static const _initializationSettingsIOs = IOSInitializationSettings(
+  static const _initializationSettingsIOs = DarwinInitializationSettings(
     requestSoundPermission: false,
     requestBadgePermission: false,
     requestAlertPermission: false,
@@ -44,7 +44,7 @@ class LocalNotificationManager {
           // TODO add a proper drawable resource to android, for now using
           //      one that already exists in example app.
         ),
-        iOS: const IOSNotificationDetails(
+        iOS: const DarwinNotificationDetails(
           presentAlert:
               true, // Present an alert when the notification is displayed and the application is in the foreground (only from iOS 10 onwards)
           presentBadge:

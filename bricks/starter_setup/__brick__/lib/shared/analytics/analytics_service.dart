@@ -21,7 +21,7 @@ class AnalyticService {
       ...?parameters,
       "date": DateTime.now().toString(),
       "deviceOS": Platform.isAndroid ? "Android" : "iOS",
-      "deviceName": _deviceName
+      "deviceName": _deviceName.toString()
     });
   }
 

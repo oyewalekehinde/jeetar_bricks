@@ -3,7 +3,6 @@ import 'package:get_it/get_it.dart';
 import 'package:lottie/lottie.dart';
 import '../configs/app_configs.dart';
 import '../shared/analytics/analytics_service.dart';
-import '../shared/navigation/navigation_service.dart';
 import '../shared/utils/colors.dart';
 import '../shared/utils/storage.dart';
 
