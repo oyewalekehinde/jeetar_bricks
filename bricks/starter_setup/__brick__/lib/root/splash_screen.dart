@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:lottie/lottie.dart';
 import '../configs/app_configs.dart';
 import '../shared/analytics/analytics_service.dart';
-import '../shared/utils/colors.dart';
 import '../shared/utils/storage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -52,11 +50,9 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColors.scaffoldBackgroundColor,
+        backgroundColor: Colors.white,
         body: Center(
-            child: Lottie.asset(
-          'assets/json/splash_screen.json',
-          controller: _animationController,
-        )));
+          child: Text("Splash Screen"),
+        ));
   }
 }

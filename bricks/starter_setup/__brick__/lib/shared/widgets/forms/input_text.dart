@@ -140,13 +140,13 @@ class _InputTextState extends State<InputText> {
 
   errorTextStyle(context) => TextStyle(
       fontSize: 10.sp,
-      color: Theme.of(context).errorColor,
+      color: Theme.of(context).colorScheme.error,
       fontWeight: FontWeight.w500,
       height: 1.4);
 
   textFieldTextStyle(context) => TextStyle(
       fontSize: 14.sp,
-      color: Theme.of(context).textTheme.bodyText1!.color,
+      color: Theme.of(context).textTheme.bodyLarge!.color,
       fontWeight: FontWeight.w500,
       height: 1.4);
 }

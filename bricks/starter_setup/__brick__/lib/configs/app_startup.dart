@@ -6,6 +6,7 @@ import '../shared/di.dart';
 import '../shared/notifications/firebase_notification_manager.dart';
 import '../shared/utils/storage.dart';
 import 'app_configs.dart';
+import '../firebase_options.dart';
 
 // This is our global ServiceLocator
 GetIt getIt = GetIt.instance;
@@ -34,7 +35,8 @@ class AppStartUp {
   }
 
   Future<void> initializedFirebase() async {
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform);
   }
 
   Future<void> firebasePushNotification() async {

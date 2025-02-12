@@ -26,7 +26,7 @@ class NotificationMessage {
         ),
       ),
     );
-    overlayState?.insert(overlayEntry);
+    overlayState.insert(overlayEntry);
     await Future.delayed(Duration(seconds: 2));
     overlayEntry.remove();
   }

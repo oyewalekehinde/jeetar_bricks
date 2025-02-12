@@ -182,7 +182,7 @@ class _InputDropDownState extends State<InputDropDown> {
 
   errorTextStyle(context) => TextStyle(
       fontSize: 14.sp,
-      color: Theme.of(context).errorColor,
+      color: Theme.of(context).colorScheme.error,
       fontWeight: FontWeight.w500,
       height: 1.4);
 }
