@@ -23,7 +23,7 @@ Install a brick
 
 ## Install Starter Setup brick
 ```sh
-mason add -g starter_setup --git-url https://github.com/DAMMAK/brick_jeetar --git-path bricks/starter_setup
+mason add -g starter_setup --git-url https://github.com/oyewalekehinde/jeetar_bricks.git --git-path bricks/starter_setup
 
 ```
 ## To use Starter Setup brick
@@ -34,7 +34,7 @@ NB: Follow the prompt
 
 ## Install Module feature brick
 ```sh
-mason add -g module_feature --git-url https://github.com/DAMMAK/brick_jeetar --git-path bricks/module_feature
+mason add -g module_feature --git-url https://github.com/oyewalekehinde/jeetar_bricks.git --git-path bricks/module_feature
 ```
 
 ## To use Module feature brick
