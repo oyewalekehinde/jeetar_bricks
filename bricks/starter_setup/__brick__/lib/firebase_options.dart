@@ -24,9 +24,9 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        return app;
       case TargetPlatform.iOS:
-        return ios;
+        return app;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -49,22 +49,10 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyArDxI-szz8Fk4I0GbmBpTfaKhUaqHgOVI',
-    appId: '1:658340632289:android:44e49dcd331a4231fac9a0',
-    messagingSenderId: '658340632289',
-    projectId: 'faramove-62b90',
-    databaseURL: 'https://faramove-62b90-default-rtdb.firebaseio.com',
-    storageBucket: 'faramove-62b90.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAmVzHD8kbVDUczDAmYbzAq9o2W4eWUfxs',
-    appId: '1:658340632289:ios:efb83f23e8628e0dfac9a0',
-    messagingSenderId: '658340632289',
-    projectId: 'faramove-62b90',
-    databaseURL: 'https://faramove-62b90-default-rtdb.firebaseio.com',
-    storageBucket: 'faramove-62b90.appspot.com',
-    iosBundleId: 'com.faramove.user',
+  static const FirebaseOptions app = FirebaseOptions(
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
   );
 }
