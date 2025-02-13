@@ -1,6 +1,3 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:mason/mason.dart';
 import 'package:process_run/shell.dart';
 
