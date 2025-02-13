@@ -17,6 +17,7 @@ Future<void> installI10n(HookContext context) async {
 # Display some text
 dart run intl_utils:generate
 
+
 ''');
   context.logger.info(
       'Run this prompt after installiing the brick: dart run intl_utils:generate');

@@ -1,4 +1,3 @@
-import '../../generated/l10n.dart';
 import 'package:dio/dio.dart';
 import 'interceptors.dart';
 
@@ -94,7 +93,7 @@ extension ResponseExt on Response {
   get body => data;
 }
 
-String errorDefaultMessage = S.current.anErrorOccurred;
+String errorDefaultMessage = "An error occurred";
 // Error Handler Function
 String networkErrorHandler(DioException error,
     {Function(DioException e)? onResponseError}) {
@@ -108,15 +107,15 @@ String networkErrorHandler(DioException error,
       }
       return onResponseError!(error);
     case DioExceptionType.connectionTimeout:
-      return S.current.kindlyTryAgain;
+      return "Kindly try again, poor internet connection";
     case DioExceptionType.sendTimeout:
-      return S.current.kindlyTryAgain;
+      return "Kindly try again, poor internet connection";
     case DioExceptionType.receiveTimeout:
-      return S.current.kindlyTryAgain;
+      return "Kindly try again, poor internet connection";
     case DioExceptionType.cancel:
-      return S.current.requestCancelled;
+      return "Request cancelled";
     case DioExceptionType.unknown:
-      return S.current.noInternetConnection;
+      return "No internet connection";
     default:
       return errorDefaultMessage;
   }
