@@ -1,4 +1,4 @@
 .mason/
 
-starter_setup/__brick__/pubspec.lock
-starter_setup/__brick__/.dart_tool/
+.starter_setup/__brick__/pubspec.lock
+.starter_setup/__brick__/.dart_tool/
