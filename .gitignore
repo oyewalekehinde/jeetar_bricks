@@ -5,3 +5,6 @@ bricks/starter_setup/__brick__/pubspec.lock
 bricks/starter_setup/__brick__/.dart_tool/package_config_subset
 bricks/starter_setup/__brick__/.flutter-plugins
 bricks/starter_setup/__brick__/.flutter-plugins-dependencies
+bricks/starter_setup/hooks/.dart_tool/
+bricks/starter_setup/hooks/pubspec.lock
+bricks/starter_setup/hooks/.packages
