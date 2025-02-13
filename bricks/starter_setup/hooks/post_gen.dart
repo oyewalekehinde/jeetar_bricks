@@ -32,7 +32,8 @@ dart run intl_utils:generate
   String jsonString = jsonEncode(jsonData);
   final String filePath = "lib/I10n/intl_en.arb";
   final file = File(filePath);
+  if (!await file.exists()) {
+    await file.create(recursive: true);
+  }
   await file.writeAsString(jsonString);
-  context.logger.info(
-      'Run this prompt after installiing the brick: dart run intl_utils:generate');
 }
