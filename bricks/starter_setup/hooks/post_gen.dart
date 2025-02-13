@@ -19,8 +19,5 @@ Future<void> installI10n(HookContext context) async {
 # Display some text
 flutter pub get
 
-# Display some text
-dart run intl_utils:generate
-
 ''');
 }
