@@ -24,9 +24,9 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return app;
+        return android;
       case TargetPlatform.iOS:
-        return app;
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -49,10 +49,20 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions app = FirebaseOptions(
-    apiKey: '',
-    appId: '',
-    messagingSenderId: '',
-    projectId: '',
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyCd7f9_7iDwMXCxMQBYRymIT1VbI4-qGOE',
+    appId: '1:198599949961:android:eb02c8010fc239961cd058',
+    messagingSenderId: '198599949961',
+    projectId: 'user',
+    storageBucket: 'user.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyCxhjqsQP9w-c-zxnXeiF-WIBwigbxPESI',
+    appId: '1:198599949961:ios:40cd662acd99d2611cd058',
+    messagingSenderId: '198599949961',
+    projectId: 'user',
+    storageBucket: 'user.appspot.com',
+    iosBundleId: 'com.user',
   );
 }
