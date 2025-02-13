@@ -13,10 +13,11 @@ Future<void> installI10n(HookContext context) async {
   //await shell.run('flutter pub run intl_utils:generate');
 
   await shell.run('''
+# Display some text
+flutter pub get
 
 # Display some text
 dart run intl_utils:generate
-
 
 ''');
   context.logger.info(
