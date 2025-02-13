@@ -23,17 +23,4 @@ flutter pub get
 dart run intl_utils:generate
 
 ''');
-  final Map<String, String> jsonData = {
-    "kindlyTryAgain": "Kindly try again, poor internet connection",
-    "requestCancelled": "Request cancelled",
-    "noInternetConnection": "No internet connection",
-    "anErrorOccurred": "An error occurred"
-  };
-  String jsonString = jsonEncode(jsonData);
-  final String filePath = "lib/I10n/intl_en.arb";
-  final file = File(filePath);
-  if (!await file.exists()) {
-    await file.create(recursive: true);
-  }
-  await file.writeAsString(jsonString);
 }
